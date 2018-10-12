@@ -44,5 +44,15 @@
 (setq tab-width 2)
 (setq tramp-default-method "ssh")
 
+(require 'init-evil)
+
+(use-package undo-tree
+  :ensure t
+  :diminish t
+  :config
+  (setq undo-tree-auto-save-history t)
+  (setq undo-tree-history-directory-alist
+        (list (cons "." (expand-file-name "undo-tree-history" user-emacs-directory)))))
+
 (provide 'init)
 ;;; init.el ends here
