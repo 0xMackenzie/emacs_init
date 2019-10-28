@@ -135,6 +135,15 @@
 (add-hook 'org-shiftdown-final-hook 'windmove-down)
 (add-hook 'org-shiftright-final-hook 'windmove-right)
 
+(use-package company :ensure t
+  :init
+  (setq company-idle-delay 0.1))
+(global-company-mode 1)
+(global-set-key (kbd "<C-return>") 'company-complete)
+
+(use-package company-emoji :ensure t)
+(add-to-list 'company-backends 'company-emoji)
+
 (require 'init-lsp)
 
 (provide 'init)
