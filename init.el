@@ -135,5 +135,7 @@
 (add-hook 'org-shiftdown-final-hook 'windmove-down)
 (add-hook 'org-shiftright-final-hook 'windmove-right)
 
+(require 'init-lsp)
+
 (provide 'init)
 ;;; init.el ends here
