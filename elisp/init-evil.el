@@ -2,6 +2,10 @@
 ;;; Commentary:
 ;;; Initialize EVIL mode and configure custome key-bindings
 ;;; Code:
+
+(use-package undo-tree
+  :ensure t)
+
 (defun config-evil-leader()
   "Configure evil leader mod."
   (evil-leader/set-leader ",")
